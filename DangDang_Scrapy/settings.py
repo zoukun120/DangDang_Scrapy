@@ -14,6 +14,13 @@ BOT_NAME = 'DangDang_Scrapy'
 SPIDER_MODULES = ['DangDang_Scrapy.spiders']
 NEWSPIDER_MODULE = 'DangDang_Scrapy.spiders'
 
+#Mysql数据库的配置信息
+MYSQL_HOST = '144.34.146.135'
+MYSQL_DBNAME = 'scrapy'
+MYSQL_USER = 'root'
+MYSQL_PASSWD = '123456'
+
+MYSQL_PORT = 3306
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'DangDang_Scrapy (+http://www.yourdomain.com)'
@@ -66,6 +73,7 @@ ROBOTSTXT_OBEY = True
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'DangDang_Scrapy.pipelines.DangdangScrapyPipeline': 300,
+   # 'DangDang_Scrapy.pipelinedb.pipelinedb': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
